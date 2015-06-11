@@ -1,0 +1,127 @@
+<!doctype html>
+<html>
+    <head>
+        <title>The Winning Click</title>
+        <script type="text/javascript" src="arcade.js"></script>
+        <link rel="stylesheet" href="/theWinningClick/styles/welcome.css"/>
+    </head>
+    <body onload="drawRouletteWheel();">
+        <div class="wrap">
+            <div class="header">
+                <div class="navbar">
+                <ul>
+                    <li style="border: 3px solid limegreen;"><a href="#update">update account</a></li>
+                    <li style="border: 3px solid limegreen;"><a href="../index.html">log out</a></li>
+                    <li><a href="#games">games</a></li>
+                    <li><a href="#contact">contact us</a></li>
+                </ul>
+                </div>
+                <div class="points">
+                    points <input type="text" value="5000" name="entries"/>
+                </div>
+                <div class="points">
+                    drawing entries <input type="text" value="3" name="entries"/>
+                </div>
+                <div class="logo">
+                    <img src="/theWinningClick/images/logo.png"/>
+                </div>
+            </div>
+        </div>
+        
+        <div class="body">
+                <div id="main">
+                    <div class="content">
+                        <h1>The Winning Click</h1>
+                        <div class="info">
+                            <div>
+                                <h3>THE WINNING CLICK WHEEL</h3>
+                                <p>Spin the wheel below, and whatever number it lands on will be the number of sweepstakes entries you receive for the day.  You can spin the wheel once every 24 hours.</p>
+                            </div>
+
+                            <div>
+                                <h3>PLAY GAMES</h3>
+                                <p>You can earn points by playing GAMES!!!  You can trade your points for entries into the current sweepstakes.</p>
+                                <p>5,000 points = 1 sweepstakes entry</p>
+                            </div>
+
+                            <div>
+                                <h3>ARCADE</h3>
+                                <p>In The Winning Click ARCADE, you will find fun games that you can play to earn points.  Here is where you will find all of the non-casino type games.</p>
+                            </div>
+
+                            <div>
+                                <h3>CASINO</h3>
+                                <p>In The Winning Click CASINO, you can use your points to place bets on games like: blackjack, roulette, slots and more!  But beware!  You could end up losing all of your points if luck is not on your side (good thing you can go back to the arcade to earn more points for free).</p>
+                            </div>
+
+                            <div>
+                                <h3>INSTANT WIN</h3>
+                                <p>Aside from our sweepstakes, we will also be giving away instant cash prizes through games like MATCH, and PICK A DOOR.  Look out for the INSTANT WIN games, as they will appear on the site randomly.  You do not want to miss out on your chances to win!</p>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+                
+                <div id="winners">
+                    <div>
+                        <h3>RECENT WINNERS</h3>
+                        <h3><ul>
+                            <li>
+                                <img src="../images/chasity.jpg"/>
+                            </li>
+                        </ul></h3>
+                    </div>
+                </div>
+                
+                <div id="games">
+                    <div class="content">
+                        <div id="casino">
+                            <h2>The Winning Click</h2>
+                            <br/>
+                            <a href="../games/casino/casino.html"><img src="../images/neon_casino.png"/></a>
+                        </div>
+                        <div id="wheel">
+                            <canvas id="canvas" width="500px" height="500px"></canvas>
+                            <br/>
+                            <button id="spin" value="spin" onclick="spin();" style="float:left;" hidden="hidden">SPIN</button>
+                        </div>
+                        <div id="arcade">
+                            <h2>The Winning Click</h2>
+                            <br/>
+                            <a href="../games/arcade/arcade.html"><img src="../images/neon_arcade.png"/></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="contact">
+                    <div class="content">
+                        <br>
+                        <br>
+                        <h2>CONTACT US</h2>
+                        <br>
+                        <form align="center" action="/contacts" data-remote="true" id="new_contact" method="post" >
+                            <div >
+                                <div><input id="contact_name" maxlength="255" size="30" name="contact[name]"  placeholder="Name" type="text" /></div>
+                                  <br>
+                                <div><input id="contact_email" maxlength="255" size="30" name="contact[email]" placeholder="Email" type="text" /></div>
+                                  <br>
+                                <div><textarea id="contact_message" name="contact[message]" placeholder="Message"></textarea></div>
+                            </div>
+                                <br>
+                            <div>
+                              <button type="submit">send</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            <div class="sidebar"></div>
+            <footer>
+                <ul>
+                    <li><a href="terms.html">terms & conditions</a></li>
+                    <li><a href="privacy.html">privacy policy</a></li>
+                </ul>
+            </footer>
+            </div>
+    </body>
+</html>
