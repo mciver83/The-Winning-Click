@@ -95,43 +95,27 @@ textarea:focus {
     background: rgba(0,0,0,0);
 }
 
-/* do not group these rules */
-*::-webkit-input-placeholder {
-    color: white;
-}
-*:-moz-placeholder {
-    /* FF 4-18 */
-    color: white;
-}
-*::-moz-placeholder {
-    /* FF 19+ */
-    color: white;
-}
-*:-ms-input-placeholder {
-    /* IE 10+ */
-    color: white;
-}
 
-.header {
-    margin-top: 1%;
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
     position: fixed;
-    height: 50px;
+    height: 65px;
     width: 100%;
     top: 0px;
     background: black;
 }
 
 .logo {
-    float:left;
     width: 20%;
     background-size: cover;
-    position: fixed;
 }
 
 .logo img {
-    width: 120px;
+    height: 60px;
     margin-left: 1%;
-    top: 1%;
+    top: 0;
     position: fixed;
 }
 
@@ -149,23 +133,22 @@ textarea:focus {
 }
 
 .navbar {
-    float:left;
-    width: 98.9%;
-    text-align: right;
-    background-color: rgba(0,0,0,.9);
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
 }
 
-.navbar li {
-    display: inline;
-    margin-left: 3%;
-    padding: 0.5%;
+navbar {
+    margin: 20px;
 }
 
+
 .social {
+    position: absolute;
+    top: 65px;
+    right: 0;
     width: 15%;
-    float: right;
-    clear: both;
     width: 300px;
 }
 
@@ -251,19 +234,17 @@ textarea:focus {
     color: black;
 }
 
-#howItWorks .content {
+.info {
+    display: flex;
+    justify-content: flex-start;
+    
+    flex-wrap: wrap;
 }
 
-#howItWorks .info div {
-    width: 27%;
+site-info {
+    width: 30%;
     height: 300px;
-    margin-right: 5%;
-    float: left;
-}
-
-#howItWorks .info {
-    margin-left: 5%;
-    margin-right: 0%;
+    margin: 1%;
 }
 
 #howItWorks h2 {
@@ -371,6 +352,26 @@ footer li {
 
 #canvas {
     z-index: 1;
+}
+
+
+
+
+/* do not group these rules */
+*::-webkit-input-placeholder {
+    color: rgb(140,140,140);
+}
+*:-moz-placeholder {
+    /* FF 4-18 */
+    color: rgb(140,140,140);
+}
+*::-moz-placeholder {
+    /* FF 19+ */
+    color: rgb(140,140,140);
+}
+*:-ms-input-placeholder {
+    /* IE 10+ */
+    color: rgb(140,140,140);
 }
 
 

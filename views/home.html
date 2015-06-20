@@ -1,0 +1,113 @@
+<header>
+    <div class="logo">
+        <img src="images/logo.png"/>
+    </div>
+    <ul class="navbar">
+        <navbar ng-repeat="navbarItem in navbarItems"></navbar>
+    </ul>
+    <div class="social">
+        <div id="facebook">
+            <a href="https://www.facebook.com/thewinningclick" target="blank"><img src="images/facebook-green.png"/></a>
+        </div>
+        <div id="twitter">
+            <a href="https://www.twitter.com/thewinningclick" target="blank"><img src="images/twitter-green.png"/></a>
+        </div>
+        <div id="instagram">
+            <a href="https://www.instagram.com/the_winning_click" target="blank"><img src="images/instagram-green.png"/></a>
+        </div>
+    </div>
+</header>
+
+
+            
+<div class="body">
+    
+    <winning-click></winning-click>
+
+    
+    
+    <div id="winners">
+        <h3>RECENT WINNERS</h3>
+        <ul>
+            <winners></winners>
+        </ul>
+    </div>
+    
+    <div id="howItWorks" class="content">
+        <how-works></how-works>
+        <div class="info">
+            <site-info ng-repeat="infoBox in infoBoxes"></site-info>
+       </div>
+    </div>
+    
+    <div id="sign_in">
+        <div class="background">
+            <div class="content">
+                <h2>SIGN IN</h2>
+                <form align="center">
+                    <div >
+                        <div><input id="contact_email" maxlength="255" size="30" name="email" placeholder="email" type="text" /></div>
+                        <br>
+                        <div><input id="contact_name" maxlength="255" size="30" name="name"  placeholder="password" type="password" /></div>
+                        <br>
+                        <div>
+                            <button><a href="#/welcome">sign in</a></button>
+                        </div>
+                    </div>
+                </form>
+                <br/>
+                <a href="thewinningclick.com/forgot_password.html">forgot password?</a>
+            </div>
+        </div>
+    </div>
+    
+    <div id="register">
+        <div class="background">
+            <div class="content">
+                <h2>REGISTRATION</h2>
+                <p>if you want to enter the sweepstakes or win prizes from the instant win games, you must be a registered member.  We just need some basic info from you so we can contact you if you win.</p>
+                <p>If you don't care to win money, and you would just like to play some really fun games, continue below, or click on "games" from the menu at the top.</p>
+                <reg-form></reg-form>
+            </div>
+        </div>
+    </div>
+    
+    <div id="games">
+        <div class="content">
+            <h2></h2>
+            <div id="casino">
+                <h2>The Winning Click</h2>
+                <br/>
+                <img src="images/neon_casino.png"/>
+            </div>
+            <div id="arcade">
+                <h2>The Winning Click</h2>
+                <br/>
+                <img src="images/neon_arcade.png"/>
+            </div>
+        </div>
+    </div>
+    
+    <div id="contact">
+        <div class="content">
+            <br>
+            <br>
+            <h2>CONTACT US</h2>
+            <br>
+            <form align="center" action="/contacts" data-remote="true" id="new_contact" method="post" >
+                <div >
+                    <div><input id="contact_name" maxlength="255" size="30" name="contact[name]"  placeholder="Name" type="text" /></div>
+                      <br>
+                    <div><input id="contact_email" maxlength="255" size="30" name="contact[email]" placeholder="Email" type="text" /></div>
+                      <br>
+                    <div><textarea id="contact_message" name="contact[message]" placeholder="Message"></textarea></div>
+                </div>
+                    <br>
+                <div>
+                  <button type="submit">send</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+                
