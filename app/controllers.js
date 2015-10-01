@@ -10,19 +10,19 @@ $scope.infoBoxes = [
 	},
 	{
 	    title: 'PLAY GAMES',
-	    text: 'You can earn points by playing GAMES!!!  You can trade your points for entries into the current sweepstakes.'
+	    text: 'You can earn points by playing GAMES!!!  Once you earn enough points, you can trade them in for an extra spin on the wheel!'
 	},
 	{
 	    title: 'ARCADE',
-	    text: 'In The Winning Click ARCADE, you will find fun games that you can play to earn points.  Here is where you will find all of the non-casino type games.'
+	    text: 'In The Winning Click ARCADE, you will find fun games that you can play to earn points.  In the Arcade, you can mever lose points, only gain them!'
 	},
 	{
 	    title: 'CASINO',
-	    text: 'In The Winning Click CASINO, you can use your points to place bets on games like: blackjack, roulette, slots and more!  But beware!  You could end up losing all of your points if luck is not on your side (good thing you can go back to the arcade to earn more points for free).'
+	    text: 'In The Winning Click CASINO, you can use your points to play our casino games like: blackjack, roulette, slots and more!  Your odds of winning in our casino are better than most, but if you run out of points, you can always play games in the Arcade to earn more points.'
 	},
 	{
 	    title: 'INSTANT WIN',
-	    text: 'Aside from our sweepstakes, we will also be giving away instant cash prizes through games like MATCH, and PICK A DOOR.  Look out for the INSTANT WIN games, as they will appear on the site randomly.  You do not want to miss out on your chances to win!'
+	    text: 'Keep an eye out for our INSTANT WIN games!  We will randomly have games where members can play and earn prizes on the spot!'
 	}
 ]
 
@@ -32,12 +32,8 @@ $scope.navbarItems = [
 		url: '#/#sign_in'
 	},
 	{
-		name: 'register',
-		url: '#/#register'
-	},
-	{
 		name: 'home',
-		url: '/#top'
+		url: '#/#top'
 	},
 	{
 		name: 'how it works',
@@ -52,6 +48,10 @@ $scope.navbarItems = [
 		url: '#/#contact'
 	}
 ]
+
+$scope.showReg = function(){
+	$scope.show = !$scope.show;
+};
 
 
 })

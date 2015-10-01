@@ -1,7 +1,18 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: white;
     background: black;
-    font-family: sans-serif;
+    font-family: Open Sans Condensed;
 }
 
 h1 {
@@ -36,24 +47,43 @@ a {
     font-size: 18px;
 }
 
+a:visited, a:link {
+    color: #ff963e;
+}
+
 a:hover {
     color: #59cdcd;
 }
 
+
 form {
     margin-top: 5%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-direction: column;
+    -moz-box-direction: column;
+    -ms-flexbox-direction: column;
+    -webkit-flex-direction: column;
+    align-items: center;
 }
 
-form textarea {
+textarea {
+    margin: 5px;
     width: 40%;
+    min-width: 250px;
     height: 200px;
     background: rgba(0,0,0,0.6);
     border: 5px solid black;
 }
 
-form input {
+input {
+    margin: 5px;
     width: 250px;
-    height: 24px;
+    height: 30px;
     background: rgba(0,0,0,0.6);
     border: 5px solid black;
 }
@@ -68,28 +98,11 @@ button {
     border: 2px solid black;
 }
 
-button a {
-    height: 37.5px;
-    width: 100px;
-    font-size: 18px;
-    font-style: bold;
-    background: black;
-    color: limegreen;
-    border: 2px solid black;
-}
-
-input {
-    font-weight: 800;
-    font-size: 18px;
-}
 
 input:focus {
     background: rgba(0,0,0,0);
 }
 
-textarea {
-    font-size: 18px;
-}
 
 textarea:focus {
     background: rgba(0,0,0,0);
@@ -97,14 +110,21 @@ textarea:focus {
 
 
 header {
-    display: flex;
+    font-size: 14px;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
     justify-content: space-between;
+    -webkit-justify-content: space-between;
     margin-top: 0;
     position: fixed;
-    height: 65px;
+    height: 35px;
     width: 100%;
     top: 0px;
-    background: black;
+    background: rgba(0,0,0,0.9);
+    box-shadow: 0 0 80px 80px rgba(0,0,0,0.9);
 }
 
 .logo {
@@ -134,8 +154,12 @@ header {
 
 .navbar {
     margin-right: 30px;
-    display: flex;
-    align-items: center;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+    align-items: flex-start;
     text-transform: uppercase;
 }
 
@@ -148,22 +172,20 @@ navbar {
     position: absolute;
     top: 65px;
     right: 0;
-    width: 15%;
-    width: 300px;
 }
 
 
 .social img{
-    height: 55px;
-    width: 55px;
-    margin-right: 8%;
-    clear:both;
-    float: right;
+    height: 50px;
+    width: 50px;
 }
 
 .social a img:hover {
-    height: 80px;
-    width: 80px;
+    position: relative;
+    top: 0;
+    right: 10px;
+    /*height: 80px;
+    width: 80px;*/
 }
 
 .body div {
@@ -176,6 +198,19 @@ navbar {
     padding-bottom: 5%;
     padding-left: 10%;
     padding-right: 10%;
+}
+
+.column {
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+    flex-direction: column;
+    -webkit-box-direction: column;
+    -moz-box-direction: column;
+    -ms-flexbox-direction: column;
+    -webkit-flex-direction: column;
 }
 
 .imageBackdrop img {
@@ -195,15 +230,15 @@ navbar {
 }
 
 #home {
-    background-image: url(../images/fallingmoney.png);
-    background-size: cover;
-    color: whitesmoke;
+    /*background-image: url(../images/fallingmoney.png);
+    background-size: cover;*/
+    /*color: whitesmoke;*/
     text-align: center;
     top: 0;
 }
 
 #home .content {
-    background: rgba(25,25,25,.8);
+    background: rgba(0,0,0,.7);
 }
 
 
@@ -235,11 +270,19 @@ navbar {
 }
 
 .info {
-    display: flex;
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
     justify-content: flex-start;
-    
+    -webkit-justify-content: flex-start;
     flex-wrap: wrap;
+    -webkit-flex-flow: row wrap;
+    -moz-flex-flow: row wrap;
+    -ms-flex-flow: row wrap;
 }
+
 
 site-info {
     width: 30%;
@@ -252,18 +295,16 @@ site-info {
 }
 
 #howItWorks h3 {
-    color: limegreen;
+    color: #ff963e;
 }
 
 #sign_in {
     background: #ff963e;
     color: black;
     text-align: center;
+    box-shadow: 0px, 0px, 10px, 10px #ff963e;
 }
 
-#sign_in .content {
-    padding-top: 5%;
-}
 
 #sign_in a {
     color: black;
@@ -272,8 +313,12 @@ site-info {
 }
 
 #register {
-    background: white;
-    border: 10px solid black;
+    background: limegreen;
+    width: 80%;
+    margin-left: 10%;
+    position: fixed;
+    top: 25%;
+    box-shadow: -8px -8px 2px 2px rgba(0,0,0,0.4);
 }
 
 #register .background {
@@ -281,79 +326,122 @@ site-info {
     background-size: cover;
 }
 
-#register .content {
-    background: rgba(0,0,0,0.7);
-}
+/*#register .content {
+    background: rgba(200,200,200,0.7);
+}*/
 
 #register input {
     color: white;
 }
+
+#popup--close {
+    background-image: url(../images/close_icon.png);
+    background-size: cover;
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    top: 27%;
+    right: 11%;
+    /* color: black; */
+    /* font-size: 34px; */
+}
+
+.background--black {
+    background: rgba(0,0,0,0.9);
+}
+
+
 #games {
     height: 800px;
-    background-image: url(../images/background-for-twitter-5-free-hd-background-and-wallpaper.jpg);
+    background-image: url(../images/fallingmoney.png);
     background-size: cover;
 }
 
 #games .content {
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.4);
+    display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+    align-items: center;
 }
 
-#casino {
-    margin-left: 5%;
-    height: 60%;
-    width: 40%;
-    float:left;
-    text-align: center;
-    color: limegreen;
+.font--large {
+    font-size: 100px;
 }
 
-#casino img {
-    margin-left: 0%;
-    width: 80%;
-}
-
-#arcade {
-    margin: auto;
-    height: 60%;
-    width: 40%;
-    text-align: center;
-    color: limegreen;
-}
-
-#arcade img {
-    margin-left: 0%;
-    width: 80%;
-}
 
 #contact {
     text-align: center;
-    background: limegreen;
+    background: whitesmoke;
     background-size: cover;
     color: black;
 }
 
-#contact .content {
-    background:;
-}
 
 footer {
-    position: fixed;
-    bottom: 0px;
+    /* position: absolute; */*/
+    bottom: 0px;*/
     width: 100%;
+    height: 40px;
+    bottom: 0;
     z-index: 1;
     background: black;
-    overflow: hidden;
+    /*overflow: hidden;*/
     text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    align-items: center;
 }
+
+
 footer li {
-    display: inline;
     padding-right: 10px;
 }
+
 
 #canvas {
     z-index: 1;
 }
 
+.text--color-main{
+    font-family: Rancho;
+    color: limegreen;
+}
+
+.text--boxshadow {
+    text-shadow: 4px 4px 4px  black;
+}
+
+
+video#bgvid {
+position: fixed;
+top: 50%;
+left: 50%;
+/*min-width: 100%;
+min-height: 100%;*/
+width: 100%;
+/*height: 100%;*/
+z-index: -1;
+-webkit-transform: translateX(-50%) translateY(-50%);
+transform: translateX(-50%) translateY(-50%);
+background: url(../images/fallingmoney.png);
+/*background: url(polina.jpg) no-repeat;
+background-size: cover;*/
+}
 
 
 

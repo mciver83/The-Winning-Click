@@ -1,0 +1,26 @@
+{
+  "name": "the-winning-click",
+  "version": "1.0.0",
+  "description": "sweepstakes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mciver83/The-Winning-Click.git"
+  },
+  "author": "Mark",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mciver83/The-Winning-Click/issues"
+  },
+  "homepage": "https://github.com/mciver83/The-Winning-Click#readme",
+  "dependencies": {
+    "mongoose": "^4.1.8",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "session": "^0.1.0"
+  }
+}

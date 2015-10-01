@@ -21,7 +21,8 @@
 
             
 <div class="body">
-    
+    <video autoplay loop poster="" id="bgvid" src="http://v600.canstockphoto.com/can-stock-photo_csp1912608.mp4" type="video/mp4">
+    </video>
     <winning-click></winning-click>
 
     
@@ -42,70 +43,52 @@
     
     <div id="sign_in">
         <div class="background">
-            <div class="content">
+            <div class="content column">
                 <h2>SIGN IN</h2>
                 <form align="center">
-                    <div >
-                        <div><input id="contact_email" maxlength="255" size="30" name="email" placeholder="email" type="text" /></div>
-                        <br>
-                        <div><input id="contact_name" maxlength="255" size="30" name="name"  placeholder="password" type="password" /></div>
-                        <br>
-                        <div>
-                            <button><a href="#/welcome">sign in</a></button>
-                        </div>
-                    </div>
+                    <input ng-model="email" placeholder="email" type="text" />
+                    <input ng-model="password" placeholder="password" type="password" />
+                    <button ng-click="login(email, password)">sign in</button>
                 </form>
                 <br/>
                 <a href="thewinningclick.com/forgot_password.html">forgot password?</a>
+                <a href="" ng-click="showReg()">not a member? click here to register</a>
             </div>
         </div>
     </div>
     
-    <div id="register">
+    <div id="register" ng-show="show">
         <div class="background">
             <div class="content">
+                <div id="popup--close" ng-click="showReg()"></div>
                 <h2>REGISTRATION</h2>
-                <p>if you want to enter the sweepstakes or win prizes from the instant win games, you must be a registered member.  We just need some basic info from you so we can contact you if you win.</p>
-                <p>If you don't care to win money, and you would just like to play some really fun games, continue below, or click on "games" from the menu at the top.</p>
                 <reg-form></reg-form>
             </div>
         </div>
     </div>
     
-    <div id="games">
-        <div class="content">
-            <h2></h2>
-            <div id="casino">
-                <h2>The Winning Click</h2>
-                <br/>
-                <img src="images/neon_casino.png"/>
-            </div>
-            <div id="arcade">
-                <h2>The Winning Click</h2>
-                <br/>
-                <img src="images/neon_arcade.png"/>
+    <div class="background--black">
+        <div id="games">
+            <div class="content">
+               
+                    <h1 class="font--large font-effect-neon"> CASINO </h1>
+               
+                
+                    <h1 class="font--large font-effect-neon"> ARCADE </h1>
+               
             </div>
         </div>
     </div>
     
     <div id="contact">
         <div class="content">
-            <br>
-            <br>
             <h2>CONTACT US</h2>
             <br>
-            <form align="center" action="/contacts" data-remote="true" id="new_contact" method="post" >
-                <div >
-                    <div><input id="contact_name" maxlength="255" size="30" name="contact[name]"  placeholder="Name" type="text" /></div>
-                      <br>
-                    <div><input id="contact_email" maxlength="255" size="30" name="contact[email]" placeholder="Email" type="text" /></div>
-                      <br>
-                    <div><textarea id="contact_message" name="contact[message]" placeholder="Message"></textarea></div>
-                </div>
-                    <br>
-                <div>
-                  <button type="submit">send</button>
-                </div>
+            <form align="center" method="post" >
+                <input id="contact_name"  placeholder="Name" type="text" />
+                <input id="contact_email" placeholder="Email" type="text" />
+                <textarea id="contact_message" placeholder="Message"></textarea>
+                <button type="submit">send</button>
             </form>
         </div>
     </div>
